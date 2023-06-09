@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import TodoForm from './TodoForm';
 import ListTodo from './ListTodo';
+import Item from './Item'
 import './Todo.css';
 
 function Todo() {
@@ -8,7 +9,8 @@ function Todo() {
     const [items, setItem] = useState([]);
 
     //Adiciona as tarefas na lista
-    function onAddItem(item){
+    function onAddItem(text){
+        let item = new Item(text)
         setItem([...items, item])
     }
 

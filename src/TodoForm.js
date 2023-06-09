@@ -15,17 +15,19 @@ function TodoForm(props) {
     function addItems(event) {
         event.preventDefault();
         // setItem([...items, text])
-        props.onAddItem(text)
-        setText("")
+        if (text) {
+            props.onAddItem(text)
+            setText("")
+        }
 
     }
 
-    return(
-    <form>
-        <input onChange={handleChange} type="text" value={text}></input>
-        <button onClick={addItems}>ADD</button>
+    return (
+        <form>
+            <input onChange={handleChange} type="text" value={text}></input>
+            <button onClick={addItems}>ADD</button>
 
-    </form>
+        </form>
 
     )
 }
