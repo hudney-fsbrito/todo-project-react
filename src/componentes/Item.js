@@ -1,4 +1,4 @@
-
+//Caracterização do item
 class Item {
 
     static lastId = 0;
@@ -6,7 +6,7 @@ class Item {
     constructor(text){
         this.id = Item.lastId++
         this.text = text;
-
+        this.done = false;
     }
 }
 
