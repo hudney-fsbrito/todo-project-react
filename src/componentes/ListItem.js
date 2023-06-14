@@ -17,7 +17,7 @@ function ListItem(props) {
     return (
         <li >
             <Card className={props.item.done ? "done item" : "item"}>
-                {`${props.item.id + 1} - `}
+                {/* {`${props.item.id + 1} - `} */}
                 {props.item.text}
                 <div>
                     <button onClick={() => { props.onDone(props.item) }}><DoneImg done={props.item.done}></DoneImg></button>
